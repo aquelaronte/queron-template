@@ -65,6 +65,4 @@ The project is structured as follows:
 │   └── App.tsx # main application file
 │   └── env.d.ts
 │   └── index.tsx # application entry point
-├── src
-
 ```
