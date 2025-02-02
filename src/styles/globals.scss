@@ -1,0 +1,32 @@
+@import "./themes/light.scss";
+@import "./themes/dark.scss";
+@import "./fonts/poppins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+  min-width: 100vw;
+  min-height: 100vh;
+  font-size: 14px;
+}
+
+.root {
+  transition: transform 100ms ease-in-out;
+
+  &.fade-out {
+    transform: translateX(100%);
+  }
+  &.fade-in {
+    transform: translateX(0%);
+  }
+}

@@ -1,0 +1,86 @@
+.button {
+  // Button variant --------------------------------------
+  &[data-variant="primary"] {
+    --target-color: var(--primary-color);
+  }
+
+  &[data-variant="info"] {
+    --target-color: var(--info-color);
+  }
+  // End of button variant ------------------------------
+
+  // Button type ----------------------------------------
+  &[data-type="filled"] {
+    --bg: var(--target-color);
+    --color: var(--text-color);
+    --border: none;
+    --border-radius: 0.5rem;
+  }
+
+  &[data-type="outlined"] {
+    --bg: transparent;
+    --color: var(--target-color);
+    --border: 1px solid var(--target-color);
+    --border-radius: 0.5rem;
+  }
+
+  &[data-type="text"] {
+    --bg: transparent;
+    --color: var(--target-color);
+    --border: none;
+
+    &:hover {
+      --color: var(--info-color);
+    }
+  }
+
+  &[data-type="link"] {
+    --bg: transparent;
+    --color: var(--target-color);
+    --border: none;
+    text-decoration: underline;
+    padding: 0;
+
+    &:hover {
+      --color: var(--info-color);
+    }
+  }
+
+  &[data-type="tinted"] {
+    --bg: color-mix(in srgb, var(--target-color) 30%, transparent);
+    --color: var(--target-color);
+    --border: none;
+    --border-radius: 0.5rem;
+    transition: background 0.3s ease;
+
+    &:hover {
+      --bg: color-mix(in srgb, var(--target-color) 40%, transparent);
+    }
+  }
+  // End of button type -----------------------------
+
+  // Button size ------------------------------------
+  &[data-size="small"] {
+    --padding: 0.5rem 1rem;
+    --font-size: 0.75rem;
+  }
+
+  &[data-size="medium"] {
+    --padding: 0.75rem 1.5rem;
+    --font-size: 1rem;
+  }
+
+  &[data-size="large"] {
+    --padding: 1rem 2rem;
+    --font-size: 1.25rem;
+  }
+  // End of button size -----------------------------
+
+  background-color: var(--bg);
+  color: var(--color);
+  padding: var(--padding);
+  font-size: var(--font-size);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.text-field {
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 2.5rem;
+  font-size: 1rem;
+  border: none;
+  transition: box-shadow 300ms ease-in-out;
+  outline: 1.2px solid var(--primary-color);
+  box-shadow: 1px 5px 15px
+    color-mix(in srgb, var(--primary-color) 50%, transparent);
+
+  *::placeholder {
+    color: color-mix(in srgb, var(--text-color) 20%, transparent);
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
